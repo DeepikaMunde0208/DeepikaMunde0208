@@ -1,0 +1,346 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing:border-box;
+
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/abstract.webp);
+    background-size:cover;
+    background-position: center;
+
+}
+
+.conatiner{
+   padding: 10px 10%;
+
+}
+.logo {
+    max-width: 100px; /* Set the maximum width of the logo */
+    max-height: 100px; /* Set the maximum height of the logo */
+}
+
+nav{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-wrap: wrap;
+
+}
+nav ul li{
+    display: inline-block; /*for horizontal aligment  li me jo bhi hai un sab ko horizontal lana ka */
+    list-style: none;
+    margin: 10px 20px;  /* space btwn all li component*/
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none; /*remove underline*/
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+      /* hover ke liye like  cursor le jaane ke baad line  underline show hone chiye*/
+      content: '';
+      width: 0; /*intiall becuse underline red colour line we want show when we keep cursor on it*/
+      height: 3px;
+      background: #ff004f; /* red color*/
+      position:absolute;
+      left:0;
+      bottom: -6px;
+      transition: 0.5s;  /* transition hoga hover krne ke baad*/
+}
+
+/*at the time of hover or cursor come on that a tag value only it has to show the */
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+.header-text{
+    margin-top:20px;
+    font-size: 30px;
+
+}
+
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+
+.header-text h1 span{
+    font-size: 60px;
+    color:#ff004f
+}
+/* 
+about */
+#about{
+    padding:80px 0;
+    color:#ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#about .conatiner .row .about-col-1 img{
+    margin-top: 0%;
+    margin-left: calc(0%-0px);
+}
+
+#about .conatiner .row .about-col-1 img{
+     width: 100%;
+     box-shadow: 0px 0px 85px 0px rgb(0,0,0,0.14);
+     height: 400px;
+     object-fit: cover;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight:600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height: 3px;
+    background:#ff004f;
+    position:absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+
+.tab-links.active-link::after{
+    width:50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin:10px 0;
+}
+
+.tab-contents ul li span{
+      color:#b54769;
+      font-size: 14px;
+}
+
+
+.tab-contents{
+    display:none;
+    /* all the content of skills ,eduction,experience is hide */
+} 
+
+.tab-contents.active-tab{
+    display: block;
+}
+#hero{
+    background: url();
+    height:100vh;
+    width:100%;
+}
+
+
+*,::after,::before{
+   box-sizing: border-box; 
+}
+
+.conatiner{
+    width:100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+#hero .hero-content{
+     height:100vh;
+     text-align: left;
+     width:100%;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+}
+
+
+h1{
+    margin: 0;
+}
+
+.hero-content h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: uppercase;
+    color: #fff;
+}
+
+.hero-content p{
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+p{
+    margin: 25px,0;
+    padding:0;
+    line-height: 28px;
+}
+
+#portfolio{
+    padding:50px 0 ;
+}
+
+/* .work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius:10px ;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+      width:100%;
+      border-radius:10px;
+      display: block;
+      height:50%;
+} */
+
+
+
+.work-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-cards {
+    flex: 0 0 calc(33.33% - 20px);
+    height: 300px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+    /* box-shadow: 5px 8px 32px 20px rgba(113, 119, 208, 0.37); */
+    overflow: hidden;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project-cards:hover {
+    /* background: rgba(143, 201, 226, 0.6); */
+    transform: scale(1.1); /* Add a scale transform on hover to make it grow slightly */
+    box-shadow: 10px 16px 40px 30px rgba(113, 119, 208, 0.5); /* Update the box-shadow on hover */
+}
+
+.project-cards a {
+    display: block;
+    height: 100%;
+}
+
+
+.img-responsive {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* CSS for the .role element */
+.role {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust font weight if desired */
+    color: #007bff; /* Change the text color to your preference */
+}
+
+/* Additional CSS for the typing effect */
+.typed-cursor {
+    display: inline-block;
+    width: 10px; /* Adjust the cursor width as needed */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.image-frame {
+    border: 20px solid #f9ecec; /* Add a black border to create a frame effect */
+    padding: 10px; /* Adjust padding for the desired frame width */
+}
+
+.journal-info .project-cards{
+    margin-bottom: 30px;
+    position: relative;
+    border-radius:10px ;
+    overflow: hidden;
+    width:100%;
+    border-radius:10px;
+    display: block;
+    height:50%;
+}

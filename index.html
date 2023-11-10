@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepika Munde</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous" defer></script>
+
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="conatiner">
+
+            <nav>
+                <img src="images/1.png" class="logo">
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="header-text">
+                
+                <h1> Hi ,I'm Deepika Munde <br>A <span class="role"></span></h1>
+               
+              
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- id div ko two part me divide kr raha hai like first part that is col-1 jis me hum images or photo lagyenge
+or second part me about me apna baare me likhenge  -->
+    <div id="about">
+        <div class="conatiner">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="image-frame">
+                    <img src="images/Untitled design.png">
+                </div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me </h1>
+                    <p>A prefinal year undergraduate student at the Indian Institute of Information
+                        Technology Raichur which started in 2019, taking us the Euphoric batch under the mentor Indian Institute of
+                        Technology Hyderabad..</p>
+
+
+                    <div class="tab-titles">
+
+                        <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                        <!-- active-link another class name -->
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+
+                    </div>
+
+                    <div class="tab-contents  active-tab" id="skills">
+
+                        <ul>
+                            <li> <span>Programming Languages:</span> <br>C,C++,Python,JavaScript</li>
+                            <li> <span>Database:</span> <br> MongoDB,MySQL </li>
+                            <li> <span>Frameworks:</span> <br>HTML,CSS,ReactJS,NodeJS,ExpressJS </li>
+                            <li> <span>Software:</span> <br>Postman,Canvas</li>
+
+                        </ul>
+
+
+                    </div>
+
+
+
+
+                    <div class="tab-contents" id="experience">
+
+                        <ul>
+                            <li> <span>Library Management System</span> <br> Tch stack:Frontend- HTML, CSS | Backend-MySQL, PHP</li>
+                            <li> <span>Flickweb-Entertainment website</span> <br> Tech stack:ReactJS, Bootstrap | Backend - NodeJS, Firebase </li>
+                            <li> <span>spotify clone using MERN Stack</span> <br> Tech stack:frontend- ReactJS, Tailwind CSS |Backend-NodeJS, ExpressJS, MongoDB  | Postman  </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                    <div class="tab-contents" id="education">
+
+                        <ul>
+                            <li> <span>December 2021-July 2025</span> <br>Indian Instuite Information Technology,Raichur
+                            </li>
+                            <li> <span>X Grades:</span> <br> 91% </li>
+                            <li> <span>wXII Grades:</span> <br>85% </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+   portfolio -->
+
+    <div id="id">
+        <div class="container">
+            <h1 class="sub-title">MY WORK EXPERIENCE</h1>
+            <div class="work-list">
+
+                <div class="journal-info project-cards">
+
+                    <a href="https://iiitr.ac.in/"><img data-aso="fade-up" data-aos-delay="100"
+                        src="images/iiitr.ac.in.webp" class="img-responsive"
+                        alt=" iiitr.ac.in | Official Website | Vibhanshu Jain | IIIT Raichur | IIT Hyderabad | CSE Department | Ajmer | Hyderabad | Raichur "></a>
+      
+                    <div class="journal-txt" data-aso="fade-up" data-aos-delay="100">
+      
+                      <h4><a href="http://iiitr.ac.in/">IIIT Raichur</a></h4>
+                      <p class="separator">Official Website: iiitr.ac.in
+                      </p>
+      
+                    </div>
+      
+                  </div>
+
+
+
+
+                  
+      
+                  </div>
+
+
+
+
+
+               
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+
+
+var roles = [
+            "Full Stack Developer",
+            "Web Developer",
+            "UI-UX Designer",
+            "Backend Developer",
+            "Coder"
+        ];
+        var roleIndex = 0;
+        var roleElement = document.querySelector('.role');
+
+        function changeRole() {
+            roleElement.innerText = roles[roleIndex];
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
+
+        changeRole();
+        setInterval(changeRole, 2000); // Change role every 2 seconds
+
+
+
+
+
+
+
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+                /* for to disclose active tablinks and there content*/
+
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+                /* for to disclose active tablinks and there content*/
+
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
